@@ -1,23 +1,22 @@
-object PrimeGenerator {
-
-  def isPrime(n: Int): Boolean = {
-    // ... (предыдущая логика)
-  }
-
-  def hasUniqueDigits(n: Int): Boolean = {
-    // ... (предыдущая логика)
-  }
-
-  def generatePrimesWithUniqueDigits(limit: Int): Seq[Int] = {
-    // ... (предыдущая логика)
-  }
-}
-
 object Main {
 
+  /**
+    * Основной метод для запуска программы.
+    *
+    * @param args Аргументы командной строки (не используются).
+    */
   def main(args: Array[String]): Unit = {
-    val limit = 123456789
-    val primesWithUniqueDigits = PrimeGenerator.generatePrimesWithUniqueDigits(limit)
-    primesWithUniqueDigits.foreach(println)
+    val upperLimit = 123456789
+    val primesWithUniqueDigits = PrimeGenerator.generatePrimesWithUniqueDigits(upperLimit)
+    printResults(primesWithUniqueDigits)
+  }
+
+  /**
+    * Выводит результаты в консоль.
+    *
+    * @param results Результаты для вывода.
+    */
+  def printResults(results: Seq[Int]): Unit = {
+    results.foreach(println)
   }
 }
